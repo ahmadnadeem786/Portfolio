@@ -18,12 +18,10 @@ const Tools = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
   const cursorRef = useRef(null);
 
-  // Initial state
   useEffect(() => {
     gsap.set(cursorRef.current, { scale: 0, opacity: 0 });
   }, []);
 
-  // Move image smoothly with cursor
   const handleMouseMove = (e) => {
     gsap.to(cursorRef.current, {
       x: e.clientX + 40,
@@ -33,10 +31,8 @@ const Tools = () => {
     });
   };
 
-  // Show image on hover
   const handleMouseEnter = (skill) => {
     setHoveredSkill(skill);
-
     gsap.to(cursorRef.current, {
       scale: 1,
       opacity: 1,
@@ -45,7 +41,6 @@ const Tools = () => {
     });
   };
 
-  // Hide image on leave
   const handleMouseLeave = () => {
     gsap.to(cursorRef.current, {
       scale: 0,
@@ -56,33 +51,31 @@ const Tools = () => {
 
   return (
     <div
-    id='tools'
-      className="relative min-h-screen bg-white py-5 md:py-15 text-black font-extrabold tracking-tight px-2 md:px-10"
+      id='tools'
+      className="relative min-h-screen bg-white py-10 px-5 md:px-20 text-black font-extrabold"
       onMouseMove={handleMouseMove}
     >
       {/* Heading */}
-      <div className="flex items-start justify-between mb-15">
-        <div className="flex flex-col items-end">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800">
+      <div className="flex flex-col md:flex-row items-center justify-between mb-16">
+        <div className="flex flex-col md:items-start items-center text-center md:text-left">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">
             Tools I Use
           </h2>
-          <div className="h-1 w-[50%] bg-[#F2AA4CFF]"></div>
+          <div className="h-1 w-32 bg-[#F2AA4CFF] rounded-full"></div>
         </div>
-        <h2 className="text-4xl sm:text-5xl font-bold text-gray-800">
+        <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mt-5 md:mt-0">
           <span className="text-[#F2AA4CFF]"> -- </span>01
         </h2>
       </div>
 
       {/* Skills List */}
-      <div className="flex flex-col justify-center cursor-pointer">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
         {skills.map((skill, index) => (
           <div
             key={index}
             onMouseEnter={() => handleMouseEnter(skill)}
             onMouseLeave={handleMouseLeave}
-            className={`transition-all duration-100 ps-10 border-b-2 text-6xl py-5 ease-in-out hover:text-yellow-600 ${
-              index === 0 ? 'border-t-2' : ''
-            } border-gray-900`}
+            className="relative cursor-pointer border-b-2 border-gray-900 py-5 px-6 text-3xl sm:text-4xl transition-all duration-200 hover:text-[#F2AA4CFF]"
           >
             {skill.name}
           </div>

@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="relative  bg-[#101820FF] text-gray-300 pt-16 pb-10 overflow-hidden">
      
 
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 relative z-10">
         {/* Branding */}
         <div>
           <h3 className="text-2xl font-bold text-[#F2AA4CFF] mb-4">Ahmad</h3>

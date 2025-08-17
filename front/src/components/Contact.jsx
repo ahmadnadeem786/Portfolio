@@ -38,7 +38,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20  text-white">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-start justify-between mb-9">
           <div className="flex flex-col items-start">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-800">Contact Me</h2>
@@ -49,7 +49,7 @@ const Contact = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-around px-0 md:px-10">
+        <div className="flex flex-col md:flex-row items-center justify-around px-0 md:px-5">
 
 
           {/* Form */}

@@ -25,7 +25,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section className="relative py-20 bg-[#fff]" id="testimonials">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Section Header */}
         <div className="flex items-start justify-between mb-9 flex-wrap gap-4">
           <div className="flex-col flex gap-6 items-start">

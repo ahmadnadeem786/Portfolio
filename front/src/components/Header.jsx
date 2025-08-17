@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import ProfileImg from "../assets/img.webp";
 import CustomCursor from "./CustomCursor"; // your custom cursor component
 import Nav from "./Nav";
+import ThreeBackground from "./ThreeBackground";
 
 const Header = () => {
   const headerRef = useRef();
@@ -10,8 +11,9 @@ const Header = () => {
     <div
       ref={headerRef}
       id="home"
-      className="relative bg-[#101820FF]" /* removed cursor-pointer */
+      className="relative overflow-hidden" /* removed cursor-pointer */
     >
+      <ThreeBackground />
       {/* Cursor only appears inside header */}
       <CustomCursor containerRef={headerRef} />
 

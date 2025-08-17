@@ -4,7 +4,7 @@ import Tools from './components/Tools'
 import Projects from './components/Projects'
 
 import Footer from './components/Footer'
-import Testimonials from './components/testimonials.jsx'
+import Testimonials from './components/Testimonials.jsx'
 import Contact from './components/Contact'
 
 const App = () => {

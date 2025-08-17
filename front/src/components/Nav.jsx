@@ -66,7 +66,7 @@ const Nav = () => {
       </div>
 
       <div
-        className={`fixed top-8 right-13 w-screen md:w-[330px] h-screen md:h-[calc(100vh_-_7rem)] bg-transparent transition-transform duration-300 ease-in-out z-40
+        className={`fixed top-8 right-13 w-screen md:w-[330px] h-screen md:h-[calc(100vh_-_12rem)] bg-transparent transition-transform duration-300 ease-in-out z-40
           ${isActive ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-full opacity-0 pointer-events-none"}`}
       >
         {isActive && (
